@@ -1,0 +1,20 @@
+class Smartphone: #main class
+    def __init__(self,battery,camera): # constructor
+        self.battery=battery;
+        self.camera=camera;
+        
+class Sumsung(Smartphone):# inheritance from class Smartphone
+    def ring(self):
+        return "rings softly"
+class Tecno(Smartphone): # inheritance from class Smartphone
+    def ring(self):
+        return "rings loudly"
+# creating objects
+phone1=Sumsung("500mAh","best")
+print(phone1.battery)
+phone2=Tecno("400mAh","good")
+print(phone2.camera);
+
+#polymorphism
+for phone in [Sumsung("500mAh","best"),Tecno("400mAh","good")]:
+    print(phone.ring())
